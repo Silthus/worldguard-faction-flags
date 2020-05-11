@@ -25,12 +25,12 @@ jobs:
 
       - name: Build
         run: ./gradlew
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
           path: build/libs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload CodeCov Report
         uses: codecov/codecov-action@v1
