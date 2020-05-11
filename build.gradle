@@ -139,6 +139,10 @@ task setupServer {
 
     def url = ''
     switch (mcVersion) {
+        case '1.7.10':
+            url = 'https://cdn.getbukkit.org/spigot/spigot-1.7.10-SNAPSHOT-b1657.jar'
+            break
+
         case '1.8.8':
             url = 'https://cdn.getbukkit.org/spigot/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar'
             break
