@@ -10,7 +10,6 @@ plugins {
     id 'kr.entree.spigradle' version '1.2.1'
     id 'java'
     id 'jacoco'
-    id "net.linguica.maven-settings" version "0.5"
 }
 
 apply from: "$rootDir/gradle/jacoco.gradle"
@@ -69,6 +68,10 @@ repositories {
     maven {
         name = "github"
         url = "https://maven.pkg.github.com/Silthus/worldguard-faction-flags"
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+        }
     }
 }
 
