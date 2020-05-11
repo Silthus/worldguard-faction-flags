@@ -54,19 +54,7 @@ Currently this plugin provides the following custom flags.
 ## Compiling the Project
 
 > **Note**: This project is compiled for a very old version of Minecraft.
-
-You need to [download the Spigot build](https://cdn.getbukkit.org/spigot/spigot-1.7.10-SNAPSHOT-b1657.jar) manually and add it to your local maven repository.
-
-```shell script
-mvn install:install-file -Dfile=".\spigot-1.7.10-SNAPSHOT-b1657.jar" -DgroupId="org.spigot" -DartifactId="spigot-api" -Dversion="1.7.10-b1657" -Dpackaging=jar
-```
-
-You will also have to [download Factions](https://www.spigotmc.org/resources/factions.1900/) and install it into your local maven repository.
-
-```shell script
-mvn install:install-file -Dfile=".\Factions.jar" -DgroupId="com.massivecraft.factions" -DartifactId="Factions" -Dversion="2.14.0" -Dpackaging=jar
-mvn install:install-file -Dfile=".\MassiveCore.jar" -DgroupId="com.massivecraft" -DartifactId="core" -Dversion="2.14.0" -Dpackaging=jar
-```
+> The direct dependencies are located inside the `libs/` directory.
 
 Please read the [Contributing Guidelines](CONTRIBUTING.md) before submitting any pull requests or opening issues.
 

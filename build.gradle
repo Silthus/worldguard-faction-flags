@@ -46,9 +46,12 @@ compileJava {
 archivesBaseName = project.property("pluginName")
 
 repositories {
-    mavenLocal()
     mavenCentral()
     jcenter()
+
+    flatDir(
+            dirs: 'libs'
+    )
 
     //Added spigot repository
     maven {
@@ -71,14 +74,16 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
-    compileOnly "org.spigot:spigot-api:1.7.10-b1657"
+    compile name: 'spigot-1.7.10'
 
     //Add dependencies here
     compileOnly 'com.sk89q.worldedit:worldedit-core:6.1'
     compileOnly 'com.sk89q.worldedit:worldedit-bukkit:6.1.5'
     compileOnly 'com.sk89q.worldguard:worldguard-legacy:6.2'
-    compileOnly 'com.massivecraft.factions:Factions:2.14.0'
-    compileOnly 'com.massivecraft:core:2.14.0'
+    // compileOnly 'com.massivecraft.factions:Factions:2.14.0'
+    // compileOnly 'com.massivecraft:core:2.14.0'
+    compile name: 'Factions'
+    compile name: 'MassiveCore'
 
     //Test dependencies
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
@@ -129,7 +134,7 @@ task setupServer {
     group 'server'
     description 'Downloads the server jar'
 
-    def server = new File('working/server.jar')
+    def server = new File('working/spigot-1.7.10.jar')
 
     if (server.exists()) {
         server.delete()
