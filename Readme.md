@@ -34,17 +34,15 @@ Describe each feature you want in detail, including commands, their description,
 | ------- | :-----: |
 | 1.7.10  |   ✔️    |
 
-## Setup Template
+## Project
 
-> **Note** This setup is actual only for IntelliJ
+> **Note**: This project is compiled for a very old version of Minecraft.
 
-- Create a new Github project using this template.
-- Clone this repository and open it in IntelliJ.
-- Import the project with gradle.
-- Go into the gradle.properties file and update the variables.
-- Delete the [Changelog]. It will be generated on your first release.
-- Update this `README` with your links and project information.
-- Then execute the **setupServer** run configuration and the template will download the server jar file.
+You need to [download the Spigot build](https://cdn.getbukkit.org/spigot/spigot-1.7.10-SNAPSHOT-b1657.jar) manually and add it to your local maven repository.
+
+```shell script
+mvn install:install-file -Dfile=".\spigot-1.7.10-SNAPSHOT-b1657.jar" -DgroupId="org.spigot" -DartifactId="spigot-api" -Dversion="1.7.10-b1657" -Dpackaging=jar
+```
 
 Please read the [Contributing Guidelines](CONTRIBUTING.md) before submitting any pull requests or opening issues.
 

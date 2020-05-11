@@ -46,6 +46,7 @@ compileJava {
 archivesBaseName = project.property("pluginName")
 
 repositories {
+    mavenLocal()
     mavenCentral()
     jcenter()
 
@@ -70,7 +71,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
-    compileOnly "org.spigotmc:spigot-api:${mcVersion}-R0.1-SNAPSHOT"
+    compileOnly "org.spigot:spigot-api:1.7.10-b1657"
 
     //Add dependencies here
     compileOnly 'com.sk89q.worldguard:worldguard-legacy:6.2'
