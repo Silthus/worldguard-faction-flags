@@ -45,11 +45,14 @@ Currently this plugin provides the following custom flags.
 | ---- | ---- | ----------- |
 | `faction-claim` | `deny/allow` | Denys the claiming of faction chunks inside the given region if set to deny. *Defaults to: **allow*** |
 
-## Supported Minecraft Versions
+## Supported Versions
 
-| Version | Support |
-| ------- | :-----: |
-| 1.7.10  |   ✔️    |
+| Product | Version | Support |
+| ------- | ----- | :-----: |
+| Spigot/Bukkit | => 1.7.10  |   ✔️    |
+| WorldGuard | => 6.2 | ✔️    |
+| MassiveCraft Core | => 2.8.5 | ✔️    |
+| MassiveCraft Factions | => 2.8.5 | ✔️    |
 
 ## Compiling the Project
 
